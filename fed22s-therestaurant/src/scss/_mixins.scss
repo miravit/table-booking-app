@@ -1,0 +1,21 @@
+@use "variables" as v;
+
+// Mixins for breakpoints
+
+@mixin for-size($bp) {
+    @if $bp == small {
+        @media screen and (min-width: v.$small) {
+            @content;
+        }
+    }
+    @if $bp == medium {
+        @media screen and (min-width: v.$medium) {
+            @content;
+        }
+    }
+    @if $bp == large {
+        @media screen and (min-width: v.$large) {
+            @content;
+        }
+    }
+}
